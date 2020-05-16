@@ -1,16 +1,37 @@
 body{
 
-  height: 1080px;
 
-  background-image: linear-gradient(white, #e6ffff); 
+
+  background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); 
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite;
 
   font-family: Verdana;
+
 }
 
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0 50%;
+  }
+
+  
+}
+
+
 .header {
-  background-color: white;
+
   padding: 20px;
   text-align: center;
+  color: white;
 }
 
 
@@ -19,11 +40,12 @@ body{
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 50px;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
-
+  border-style: solid;
+  border-width: 2px;
+  color: white;
 }
 
 li {
@@ -39,7 +61,8 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #737373;
+  background-color: white;
+  color:black;
 }
 
 li.dropdown {
@@ -49,21 +72,25 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: white;
+    color: black;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -72,37 +99,36 @@ li.dropdown {
 
 .column.elso {
   width: 50%;
-  padding: 75px 0 0 5%;
+  padding: 120px 0 0 5%;
 
 }
 
 h2{
   padding: 0 0 25px 0;
-
-
+  color: white;
 }
 
+
+
+p{
+  color: white;
+}
 
 video {
   height: auto;
   position: absolute;
-  top: 350px;
-  right: 60px;
+  top: 520px;
+  right: 100px;
   font-size: 18px;
 }
 
 
 .column.masodik {
-  width: 50%;
-  padding: 75px 0 0 5%;
 
+  text-align: right;
+  padding: 150px 5% 0 50%;
 }
 
-h3{
-  padding: 0 0 25px 0;
-
-
-}
 
 
 .cotainer{
@@ -122,4 +148,77 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 0 20px;
+}
+
+
+div.gallery {
+  border: 2px solid white;
+  margin: 80px 0 0 0;
+}
+
+div.gallery:hover {
+  border: 4px solid white;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 30px;
+  float:left;
+  width: 25%;
+}
+
+
+
+  
+
+.pagination {
+position: relative;
+padding: 50px 0 50px 45% ;
+  display: inline-block;
+}
+
+.pagination a {
+
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+
+  background-color: white;
+  color: black;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: white;
+  color: black;
+}
+
+
+footer{
+
+  margin: 200px 50px 10px 50px;
+  padding: 0;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  text-align: center;
 }
